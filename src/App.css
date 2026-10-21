@@ -195,16 +195,30 @@ body {
 
 ul {
   list-style: none;
-  margin: 25px 50px 75px 30px;
+  margin: 25px 0 75px;
+  padding: 0;
 }
 
-li.main-list {
+.whole-page > ul {
+  margin: 25px 200px 75px 200px;
+}
+
+li.main-class {
   padding: 25px;
   border-bottom: solid 3px white;
   font-size: larger;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coin-name {
+  display: flex;
+  align-items: center;
 }
 
 .whole-page {
+  margin-left: 25%;
   padding: 50px;
   text-align: center;
   background: black;
@@ -227,4 +241,101 @@ li.main-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+li.news-article {
+  padding: 12px 0;
+  border-bottom: solid 1px #555;
+}
+
+.coin-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 0 0 16px;
+  }
+
+  .images {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 24px;
+    border-radius: 50%;
+    background: #232323;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+
+  /* description from the API contains HTML links */
+  a {
+    color: #6cb6ff;
+    word-break: break-all;
+  }
+
+  > div {
+    text-align: left;
+  }
+
+  table {
+    width: 100%;
+    margin-top: 32px;
+    border-collapse: collapse;
+    background: #1d1f1d;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #333;
+  }
+
+  th {
+    width: 40%;
+    color: #aaa;
+    font-weight: 600;
+  }
+
+  tr:last-child th,
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  tr:hover {
+    background: #262826;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background: #1d1f1d;
+  margin: 20px 30px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.not-found {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.not-found a {
+  pointer-events: auto;
 }
