@@ -48,8 +48,8 @@ A short walkthrough of the app: the coin list with the news sidebar, a coin's de
 ### Installation
 
 ```bash
-git clone https://github.com/mdoran3/crypto-hustle.git
-cd crypto-hustle
+git clone https://github.com/mdoran3/crypto-hustle-pro.git
+cd crypto-hustle-pro
 npm install
 ```
 
